@@ -1,0 +1,24 @@
+{
+  "name": "athrone",
+  "version": "1.0.0",
+  "description": "kct official bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node deploy-commands && node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/went-corporated/athrone.git"
+  },
+  "author": "kct",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/went-corporated/athrone/issues"
+  },
+  "homepage": "https://github.com/went-corporated/athrone#readme",
+  "dependencies": {
+    "@discordjs/rest": "^0.2.0-canary.0",
+    "discord-api-types": "^0.26.1",
+    "discord.js": "^13.5.1"
+  }
+}
