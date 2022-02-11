@@ -1,10 +1,10 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { CommandInteraction, MessageActionRow, MessageButton, MessageSelectMenu } = require('discord.js');
+const { CommandInteraction, MessageActionRow, MessageButton, MessageSelectMenu, User } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('langage')
-        .setDescription('Choisi ton langage de prédilection'),
+        .setName('sondage')
+        .setDescription('Choisi ton langage de programmation favoris'),
     /**
      * 
      * @param {CommandInteraction} interaction 
@@ -18,7 +18,17 @@ module.exports = {
                     {
                         label: 'C#',
                         description: 'Développeur .NET',
-                        value: 'CSHARP'
+                        value: 'C#'
+                    },
+                    {
+                        label: 'Python',
+                        description: 'Développeur Python',
+                        value: 'Python'
+                    },
+                    {
+                        label: 'Dart',
+                        description: 'Développeur Dart',
+                        value: 'Dart'
                     },
                     {
                         label: 'JavaScript',
@@ -27,6 +37,6 @@ module.exports = {
                     }
                 ])
             );
-        return interaction.reply({content: 'Quel est ton langage de prog préféré ?', components: [row] });
+        return interaction.reply({content: 'Quel est ton langage de programmation préféré ?', components: [row] });
     }
 }

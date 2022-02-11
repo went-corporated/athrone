@@ -10,10 +10,9 @@ module.exports = {
      * @param {CommandInteraction} interaction 
      */
     async execute(interaction) {
-        await interaction.reply('Pong');
+        await interaction.reply(`@${message.author.id}`);
 
-        const message = await interaction.fetchReply();
-
-        return interaction.editReply(`Message took ${message.createdTimestamp - interaction.createdTimestamp}ms to going byphlllohythe.\nYour ping is about ${interaction.client.ws.ping}ms.`);
+        // const message = await interaction.fetchReply();
+        // return interaction.reply(`@${targetMember.user.id}`);
     }
 }
